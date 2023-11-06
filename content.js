@@ -1,5 +1,7 @@
 const bid = crypto.randomUUID();
-let locationHref = '';
+
+let locationHref;
+let resizeTimeout;
 
 function createIframe(vid, autoplay, privacyEnhanced) {
     const autoplayParam = autoplay ? '1' : '0';
@@ -13,7 +15,9 @@ function createIframe(vid, autoplay, privacyEnhanced) {
     iframe.allowFullscreen = true;
     iframe.style.width = '100%';
     iframe.style.height = '100%';
-    iframe.style.minHeight = '600px';
+    iframe.style.minHeight = '240px'
+    iframe.style.maxHeight = '600px';
+
     return iframe;
 }
 
@@ -22,6 +26,7 @@ function updatePlayer(vid, settings) {
     const playerElement = document.getElementById('player') || document.createElement('div');
     playerElement.innerHTML = '';
     playerElement.appendChild(createIframe(vid, settings.autoplay, settings.privacyEnhanced));
+    setAspectRatio();
 }
 
 function onSettingsRetrieved(vid) {
@@ -41,6 +46,15 @@ function onUrlChange() {
         onSettingsRetrieved(v);
     } else {
         removeBypass();
+    }
+}
+
+function setAspectRatio() {
+    const bypass = document.getElementById(bid);
+    if (bypass) {
+        var width = bypass.offsetWidth;
+        var height = (width / 4) * 3;
+        bypass.style.height = height + 'px';
     }
 }
 
@@ -67,3 +81,8 @@ function waitForElement(selector) {
 }
 
 waitForElement('#error-screen');
+
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setAspectRatio, 100);
+});
