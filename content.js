@@ -17,54 +17,53 @@ function createIframe(vid, autoplay, privacyEnhanced) {
     return iframe;
 }
 
-function updatePlayer(vid) {
-    chrome.storage.sync.get({ autoplay: false, privacyEnhanced: true }, function (data) {
-        const playerElement = document.getElementById('player') || document.createElement('div');
-        playerElement.innerHTML = '';
-        playerElement.appendChild(createIframe(vid, data.autoplay, data.privacyEnhanced));
+
+function updatePlayer(vid, settings) {
+    const playerElement = document.getElementById('player') || document.createElement('div');
+    playerElement.innerHTML = '';
+    playerElement.appendChild(createIframe(vid, settings.autoplay, settings.privacyEnhanced));
+}
+
+function onSettingsRetrieved(vid) {
+    chrome.storage.sync.get({ autoplay: false, privacyEnhanced: true }, data => {
+        updatePlayer(vid, data);
     });
 }
 
 function removeBypass() {
     const bypass = document.getElementById(bid);
-    if (bypass) {
-        bypass.parentNode.removeChild(bypass);
-    }
-}
-
-function waitForElm(selector, action) {
-    new MutationObserver((mutations, obs) => {
-        if (document.querySelector(selector)) {
-            obs.disconnect();
-            action();
-        }
-    }).observe(document.body, {
-        childList: true,
-        subtree: true
-    });
+    bypass?.parentNode?.removeChild(bypass);
 }
 
 function onUrlChange() {
     const v = new URLSearchParams(window.location.search).get('v');
     if (v) {
-        updatePlayer(v);
+        onSettingsRetrieved(v);
     } else {
         removeBypass();
     }
 }
 
-new MutationObserver(() => {
-    if (window.location.href !== locationHref) {
-        locationHref = window.location.href;
-        onUrlChange();
-    }
-}).observe(document.body, { subtree: true, childList: true });
+function waitForElement(selector) {
+    const observer = new MutationObserver(() => {
+        const currentLocation = window.location.href;
+        const element = document.querySelector(selector);
 
+        if (currentLocation !== locationHref) {
+            locationHref = currentLocation;
+            onUrlChange();
+        } else if (element) {
+            element.remove();
+            onUrlChange();
+        }
+    });
 
-waitForElm('#error-screen', () => {
-    const errorScreen = document.getElementById('error-screen');
-    if (errorScreen) {
-        errorScreen.parentElement.removeChild(errorScreen);
-        onUrlChange();
-    }
-});
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+    window.addEventListener('beforeunload', () => observer.disconnect());
+}
+
+waitForElement('#error-screen');
