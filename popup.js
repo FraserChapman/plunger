@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const autoplayCheckbox = document.getElementById('autoplay-checkbox');
-    const privacyEnhancedCheckbox = document.getElementById('privacy-enhanced-checkbox');
+    const defaults = {
+        autoplay: false,
+        privacyenhanced: true,
+        cc_load_policy: false,
+        controls: true,
+        disablekb: false,
+        loop: false,
+        modestbranding: true,
+        iv_load_policy: true,
+        fs: true,
+        hl: 'en',
+    };
 
-    // Retrieve settings or set defaults if not previously set
-    chrome.storage.sync.get({ autoplay: false, privacyEnhanced: true }, function (result) {
-        autoplayCheckbox.checked = result.autoplay;
-        privacyEnhancedCheckbox.checked = result.privacyEnhanced;
-    });
+    function updateSetting(setting, value) {
+        let updateObj = {};
+        updateObj[setting] = value;
+        chrome.storage.sync.set(updateObj);
+    }
 
-    autoplayCheckbox.addEventListener('change', () => {
-        chrome.storage.sync.set({ autoplay: autoplayCheckbox.checked });
-    });
-
-    privacyEnhancedCheckbox.addEventListener('change', () => {
-        chrome.storage.sync.set({ privacyEnhanced: privacyEnhancedCheckbox.checked });
+    chrome.storage.sync.get(defaults, settings => {
+        Object.keys(defaults).forEach(setting => {
+            const input = document.getElementById(setting);
+            if (!input) {
+                return;
+            }
+            const prop = input.type === 'checkbox' ? 'checked' : 'value';
+            input[prop] = settings[setting];
+            input.addEventListener('change', () => updateSetting(setting, input[prop]));
+        });
     });
 });

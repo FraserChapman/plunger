@@ -17,7 +17,11 @@ Plunger is really just an adblock blocker workaround – it's an innovative solu
 
 ## Easy to Use:
 
-Plunger is a no-fuss, install-and-forget kind of extension. It works quietly behind the scenes, keeping your YouTube experience clean and smooth. Should you wish to tweak the settings for autoplay or privacy, a simple options menu is available.
+Plunger is a no-fuss, install-and-forget kind of extension. It works quietly behind the scenes, keeping your YouTube experience clean and smooth. Should you wish to tweak the settings for autoplay, privacy, etc a simple options menu is available.
+
+# ![plunger defualt settings](plunger-settings.png)
+
+For a full description of the options see https://developers.google.com/youtube/youtube_player_demo
 
 ## Instalation
 
