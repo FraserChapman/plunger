@@ -9,7 +9,7 @@ function createIframe(vid, autoplay, privacyEnhanced) {
     const iframe = document.createElement('iframe');
     iframe.src = `https://${domain}/embed/${vid}?autoplay=${autoplayParam}`;
     iframe.id = bid;
-    iframe.title = 'get rekt ;)';
+    iframe.title = 'YouTube video player';
     iframe.frameBorder = '0';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
@@ -17,10 +17,10 @@ function createIframe(vid, autoplay, privacyEnhanced) {
     iframe.style.height = '100%';
     iframe.style.minHeight = '240px'
     iframe.style.maxHeight = '600px';
+    iframe.onload = () => setAspectRatio();
 
     return iframe;
 }
-
 
 function updatePlayer(vid, settings) {
     const playerElement = document.getElementById('player') || document.createElement('div');
