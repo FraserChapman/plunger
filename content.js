@@ -55,7 +55,7 @@ function updatePlayer(vid, settings) {
 function onSettingsRetrieved(vid) {
     chrome.storage.sync.get({
         autoplay: false,
-        privacyenhanced: true,
+        privacyenhanced: false,
         cc_load_policy: false,
         controls: true,
         disablekb: false,

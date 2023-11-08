@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const defaults = {
         autoplay: false,
-        privacyenhanced: true,
+        privacyenhanced: false,
         cc_load_policy: false,
         controls: true,
         disablekb: false,

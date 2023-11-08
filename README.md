@@ -11,7 +11,7 @@ Plunger is really just an adblock blocker workaround – it's an innovative solu
 ## Features at a Glance:
 
 * Bypass Ad-Block Detectors: Plunger deals with ad-block detectors like a charm, letting you get to the good part without a wait.
-* Privacy-Friendly Viewing: Set to use 'youtube-nocookie.com' by default, Plunger respects your privacy and keeps your video habits away from prying eyes.
+* Privacy-Friendly Viewing: Can be set to use 'youtube-nocookie.com' - although some videos may not work with this setting.
 * Autoplay Control: You decide if videos should start playing on their own. After all, who likes jump scares?
 * Discreet and Efficient: Does the job quietly and efficiently, with no drama.
 
@@ -19,7 +19,7 @@ Plunger is really just an adblock blocker workaround – it's an innovative solu
 
 Plunger is a no-fuss, install-and-forget kind of extension. It works quietly behind the scenes, keeping your YouTube experience clean and smooth. Should you wish to tweak the settings for autoplay, privacy, etc a simple options menu is available.
 
-# ![plunger defualt settings](plunger-settings.png)
+# ![plunger settings](plunger-settings.png)
 
 For a full description of the options see https://developers.google.com/youtube/youtube_player_demo
 
