@@ -60,9 +60,9 @@ function onSettingsRetrieved(vid) {
         controls: true,
         disablekb: false,
         loop: false,
-        modestbranding: true,
         iv_load_policy: true,
         fs: true,
+        rel: false,
         hl: 'en',
     }, settings => {
         updatePlayer(vid, settings);

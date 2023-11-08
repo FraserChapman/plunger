@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         controls: true,
         disablekb: false,
         loop: false,
-        modestbranding: true,
         iv_load_policy: true,
         fs: true,
+        rel: false,
         hl: 'en',
     };
 
