@@ -133,9 +133,19 @@ Alternatively...
 4) Choose "Load Temporary Add-on…"
 5) Select the `manifest.json` file in the `plunger` folder you downloaded in step one.
 
+### Edge 
+
+1) Clone the `plunger` repository
+2) Go to `edge://extensions/`
+3) Turn on "Developer Mode"
+4) Choose "Load unpacked"
+5) select the "plunger" folder you downloaded in step one.
+
 ### Notes
 
 The extension is "Pending review" in the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
+
+The extension is "Pending review" in the Microsoft Edge Add-ons (MEA)
 
 ## Example in action
 
