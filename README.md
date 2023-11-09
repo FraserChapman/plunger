@@ -2,9 +2,9 @@
 
 ## The Youtube Adblock Blockage Remover
 
-Plunger is a borwser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
+Plunger is a browser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
 
-It should work in both Crome and Firefox.
+It should work in both Chrome and Firefox.
 
 ## How Plunger Enhances Your Viewing
 
@@ -20,7 +20,7 @@ Plunger is really just an adblock blocker workaround – it's an innovative solu
 
 Plunger is a no-fuss, install-and-forget kind of extension. It works quietly behind the scenes, keeping your YouTube experience clean and smooth. Should you wish to tweak the settings for autoplay, privacy, language, etc a simple options menu is available.
 
-## Settings 
+## Settings
 
 # ![plunger default settings](plunger-settings.png)
 
@@ -33,14 +33,14 @@ This parameter specifies whether the initial video will automatically start to p
 
 ### Enable privacy-enhanced mode
 
-This parameter specifies whether privacy-enhanced mode is used. 
+This parameter specifies whether privacy-enhanced mode is used.
 
 *   `off` (default) player will use `www.youtube.com`
 *   `on` player will use `www.youtube-nocookie.com`
 
 ### Show closed captions
 
-This parameter specifies whether closed captions are displayed, however only works for customn closed captions, not for auto generated onees.
+This parameter specifies whether closed captions are displayed, however it only works for custom closed captions, not for auto generated ones.
 
 *   `off` (default) Closed captions are not shown.
 *   `on` Closed captions are shown.
@@ -88,16 +88,16 @@ This parameter specifies whether the player will respond to keyboard controls.
 
 ### Loop video/playlist
 
-This parameter specifies whether the player should play the video repeatedly 
+This parameter specifies whether the player should play the video repeatedly
 In the case of a playlist the player plays the entire playlist and then starts again at the first video.  
-  
+ 
 *   `off` (default) Don't loop the video/playlist
 *   `on` Loop the video/playlist
 
 ### Generic related videos
 
-This parameter specifies if related videos will come from the same channel or be generic. 
-  
+This parameter specifies if related videos will come from the same channel or be generic.
+ 
 *   `off` (default) related videos will come from the same channel as the video that was just played.
 *   `on` Related videos will be more general
 
@@ -106,41 +106,41 @@ This parameter specifies if related videos will come from the same channel or be
 This parameter specifies the player's interface language.
 
 The parameter value is an [ISO 639-1 two-letter language code](http://www.loc.gov/standards/iso639-2/php/code_list.php) or a fully specified locale. For example, `fr` and `fr-ca` are both valid values. Other language input codes, such as IETF language tags (BCP 47) might also be handled properly.  
-  
+ 
 The interface language is used for tooltips in the player and also affects the default caption track. Note that YouTube might select a different caption track language for a particular user based on the user's individual language preferences and the availability of caption tracks.
 
 *   `en` (default) Use English
 
-## Instalation
+## Installation
 
 ### Chrome
 
 1) Clone the `plunger` repository
 2) Go to `chrome://extensions/`
-3) Turn on "Developer Mode" 
+3) Turn on "Developer Mode"
 4) Choose "Load unpacked extension"
-5) select the "plunger" folder you donwloaded in step one. 
+5) select the "plunger" folder you downloaded in step one.
 
-### Firefox 
+### Firefox
 
 1) Clone the `plunger` repository
 2) Go to `about:debugging`
-3) Click on "This Firefox" 
+3) Click on "This Firefox"
 4) Choose "Load Temporary Add-on…"
-5) Select the `manifest.json` file in the `plunger` folder you donwloaded in step one. 
+5) Select the `manifest.json` file in the `plunger` folder you downloaded in step one.
 
 ### Notes
 
-The extension is "Pending review" is the Chrome Web Store (CWS)...not sure if it will just get regected or not.
+The extension is "Pending review" is the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
 
-It is also "Pending review" at addons.mozilla.org (AMO)...I think it has more chance being accepted here ;)
-    
-Anyhow - this way you can see the code and deciced for yourself if you want to use it regardless.
+It is also "Pending review" at addons.mozilla.org (AMO)...I think it has more chances of being accepted here ;)
+   
+Anyhow - this way you can see the code and decide for yourself if you want to use it regardless.
 
 ## Example in action
 
 ![chrome plunger use](plunger-use.gif)
 
-## Contributing 
+## Contributing
 
-If want to contribute and make it even better, feel free to fork the repository and submit a pull request. Your contributions are always welcome!
+If you want to contribute and make it even better, feel free to fork the repository and submit a pull request. Your contributions are always welcome!
