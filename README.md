@@ -123,6 +123,10 @@ The interface language is used for tooltips in the player and also affects the d
 
 ### Firefox
 
+You can use the plugin from addons.mozilla.org (AMO) -  https://addons.mozilla.org/en-GB/firefox/addon/plunger/
+
+Alternatively...
+
 1) Clone the `plunger` repository
 2) Go to `about:debugging`
 3) Click on "This Firefox"
@@ -131,11 +135,7 @@ The interface language is used for tooltips in the player and also affects the d
 
 ### Notes
 
-The extension is "Pending review" is the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
-
-It is also "Pending review" at addons.mozilla.org (AMO)...I think it has more chances of being accepted here ;)
-   
-Anyhow - this way you can see the code and decide for yourself if you want to use it regardless.
+The extension is "Pending review" in the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
 
 ## Example in action
 
