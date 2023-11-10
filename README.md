@@ -1,10 +1,10 @@
-# ![plunger use](icon32.png) Plunger
+# ![plunger use](src/icon32.png) Plunger
 
 ## The Youtube Adblock Blockage Remover
 
 Plunger is a browser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
 
-It should work in both Chrome and Firefox.
+It works in Chrome, Firefox and Edge browsers. 
 
 ## How Plunger Enhances Your Viewing
 
@@ -115,11 +115,15 @@ The interface language is used for tooltips in the player and also affects the d
 
 ### Chrome
 
+The extension is "Pending review" in the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
+
+Alternatively...
+
 1) Clone the `plunger` repository
 2) Go to `chrome://extensions/`
 3) Turn on "Developer Mode"
 4) Choose "Load unpacked extension"
-5) select the "plunger" folder you downloaded in step one.
+5) select the `src` directory inside the `plunger` directory you downloaded in step one.
 
 ### Firefox
 
@@ -131,21 +135,19 @@ Alternatively...
 2) Go to `about:debugging`
 3) Click on "This Firefox"
 4) Choose "Load Temporary Add-on…"
-5) Select the `manifest.json` file in the `plunger` folder you downloaded in step one.
+5) Select the `manifest.json` file in the `plunger/src` directory you downloaded in step one.
 
 ### Edge 
+
+The extension is "Pending review" in the Microsoft Edge Add-ons (MEA)
+
+Alternatively...
 
 1) Clone the `plunger` repository
 2) Go to `edge://extensions/`
 3) Turn on "Developer Mode"
 4) Choose "Load unpacked"
-5) select the "plunger" folder you downloaded in step one.
-
-### Notes
-
-The extension is "Pending review" in the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
-
-The extension is "Pending review" in the Microsoft Edge Add-ons (MEA)
+5) select the `src` directory inside the `plunger` directory you downloaded in step one.
 
 ## Example in action
 
