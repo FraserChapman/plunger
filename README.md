@@ -4,7 +4,13 @@
 
 Plunger is a browser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
 
-It works in Chrome, Firefox and Edge browsers. 
+It works in Chrome, Firefox and Edge* browsers and can be added directly through their respective stores. 
+
+[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en)
+
+[![Available in the Mozilla Addons](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/)
+
+_*The extension is "Pending review" in the Microsoft Edge Add-ons (MEA) but can be manually installed (see below)_
 
 ## How Plunger Enhances Your Viewing
 
@@ -115,7 +121,7 @@ The interface language is used for tooltips in the player and also affects the d
 
 ### Chrome
 
-The extension is "Pending review" in the Chrome Web Store (CWS)...not sure if it will just get rejected or not.
+[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en)
 
 Alternatively...
 
@@ -127,7 +133,7 @@ Alternatively...
 
 ### Firefox
 
-You can use the plugin from addons.mozilla.org (AMO) -  https://addons.mozilla.org/en-GB/firefox/addon/plunger/
+[![Available in the Mozilla Addons](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/)
 
 Alternatively...
 
