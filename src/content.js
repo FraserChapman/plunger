@@ -2,15 +2,15 @@ const bid = crypto.randomUUID();
 let locationHref;
 let resizeTimeout;
 
-
 function createIframe(vid, settings) {
     const iframe = document.createElement('iframe');
-    const domain = settings.privacyenhanced ? 'www.youtube-nocookie.com' : 'www.youtube.com';
     const params = new URLSearchParams();
+    let domain = 'www.youtube.com';
 
     for (const [key, value] of Object.entries(settings)) {
         switch (key) {
             case 'privacyenhanced':
+                domain = 'www.youtube-nocookie.com';
                 break;
             case 'hl':
                 params.set(key, value);
@@ -32,7 +32,7 @@ function createIframe(vid, settings) {
     iframe.id = bid;
     iframe.title = 'YouTube video player';
     iframe.frameBorder = '0';
-    iframe.referrerpolicy = "no-referrer-when-downgrade";
+    iframe.referrerpolicy = 'no-referrer-when-downgrade';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
     iframe.style.width = '100%';
@@ -43,6 +43,7 @@ function createIframe(vid, settings) {
 
     return iframe;
 }
+
 
 function updatePlayer(vid, settings) {
     const playerElement = document.getElementById('player');
@@ -97,13 +98,17 @@ function waitForElement(selector) {
         mutations.forEach(mutation => {
             if (mutation.addedNodes.length > 0) {
                 const currentLocation = window.location.href;
-                const element = document.querySelector(selector);
                 if (currentLocation !== locationHref) {
                     locationHref = currentLocation;
                     onUrlChange();
-                } else if (element) {
+                    return
+                }
+
+                const element = document.querySelector(selector);
+                if (element && element.offsetParent) {
                     element.remove();
                     onUrlChange();
+                    return;
                 }
             }
         });
