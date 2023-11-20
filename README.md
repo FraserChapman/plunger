@@ -4,13 +4,10 @@
 
 Plunger is a browser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
 
-It works in Chrome, Firefox and Edge* browsers and can be added directly through their respective stores. 
+It works in Chrome, Firefox and Edge browsers and can be added directly through their respective stores. 
 
-[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en)
+[![Available in Chrome Web Store](img/for-chrome.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en) [![Available in the Mozilla Addons](img/for-firefox.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/) [![Available in Microsoft Edge Add-ons](img/for-edge.png)](https://microsoftedge.microsoft.com/addons/detail/plunger/nmiknblbdepeihadanmfbnoldcgcdnbk)
 
-[![Available in the Mozilla Addons](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/)
-
-_*The extension is "Pending review" in the Microsoft Edge Add-ons (MEA) but can be manually installed (see below)_
 
 ## How Plunger Enhances Your Viewing
 
@@ -28,7 +25,7 @@ Plunger is a no-fuss, install-and-forget kind of extension. It works quietly beh
 
 ## Settings
 
-# ![plunger default settings](plunger-settings.png)
+# ![plunger default settings](img/plunger-settings.png)
 
 ### Automatically play videos
 
@@ -121,7 +118,7 @@ The interface language is used for tooltips in the player and also affects the d
 
 ### Chrome
 
-[![Available in the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en)
+[![Available in the Chrome Web Store](img/for-chrome.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en)
 
 Alternatively...
 
@@ -133,7 +130,7 @@ Alternatively...
 
 ### Firefox
 
-[![Available in the Mozilla Addons](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/)
+[![Available in the Mozilla Addons](img/for-firefox.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/)
 
 Alternatively...
 
@@ -145,7 +142,7 @@ Alternatively...
 
 ### Edge 
 
-The extension is "Pending review" in the Microsoft Edge Add-ons (MEA)
+[![Available in Microsoft Edge Add-ons](img/for-edge.png)](https://microsoftedge.microsoft.com/addons/detail/plunger/nmiknblbdepeihadanmfbnoldcgcdnbk)
 
 Alternatively...
 
@@ -157,7 +154,7 @@ Alternatively...
 
 ## Example in action
 
-![chrome plunger use](plunger-use.gif)
+![chrome plunger use](img/plunger-use.gif)
 
 ## Contributing
 
