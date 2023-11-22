@@ -10,7 +10,10 @@ function createIframe(vid, settings) {
     for (const [key, value] of Object.entries(settings)) {
         switch (key) {
             case 'privacyenhanced':
-                domain = 'www.youtube-nocookie.com';
+                if (value) {
+                    domain = 'www.youtube-nocookie.com';
+                }
+
                 break;
             case 'hl':
                 params.set(key, value);
