@@ -4,10 +4,11 @@
 
 Plunger is a browser extension designed to enhance your YouTube viewing by eliminating the interruptions caused by adblock detectors.
 
-It works in Chrome, Firefox and Edge browsers and can be added directly through their respective stores. 
+It works in Chrome*, Firefox and Edge browsers and can be added directly through their respective stores. 
 
 [![Available in Chrome Web Store](img/for-chrome.png)](https://chromewebstore.google.com/detail/plunger/gjdgdicimmlekdeilmoljbhelonlgnod?hl=en) [![Available in the Mozilla Addons](img/for-firefox.png)](https://addons.mozilla.org/en-GB/firefox/addon/plunger/) [![Available in Microsoft Edge Add-ons](img/for-edge.png)](https://microsoftedge.microsoft.com/addons/detail/plunger/nmiknblbdepeihadanmfbnoldcgcdnbk)
 
+_*It may also work on other Chromium based browsers (Opera, Vivaldi, Brave, etc) that allow Chrome extensions, however these are untested and are not offically supported by this project._
 
 ## How Plunger Enhances Your Viewing
 
