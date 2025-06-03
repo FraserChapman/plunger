@@ -1,0 +1,35 @@
+{
+    "popup_tag_line": {
+        "message": "Débloquez le blocage !"
+    },
+    "popup_automatically_play_videos": {
+        "message": "Lire les vidéos automatiquement"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "Activer le mode de confidentialité amélioré"
+    },
+    "popup_show_closed_captions": {
+        "message": "Afficher les sous-titres (closed captions)"
+    },
+    "popup_show_video_annotations": {
+        "message": "Afficher les annotations vidéo"
+    },
+    "popup_display_player_controls": {
+        "message": "Afficher les commandes du lecteur"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "Afficher le bouton plein écran"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "Désactiver les commandes clavier"
+    },
+    "popup_loop_video_playlist": {
+        "message": "Lire la vidéo/liste de lecture en boucle"
+    },
+    "popup_generic_related_videos": {
+        "message": "Vidéos similaires génériques"
+    },
+    "popup_interface_language": {
+        "message": "Langue de l'interface"
+    }
+}
