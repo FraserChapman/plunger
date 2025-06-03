@@ -3,6 +3,8 @@
     "name": "plunger",
     "version": "1.0.1",
     "description": "A Youtube adblock-block-un-blocker browser extension",
+    "author": "fraser.chapman@gmail.com",
+    "default_locale": "en",
     "permissions": [
         "storage"
     ],
@@ -14,7 +16,7 @@
     "content_scripts": [
         {
             "matches": [
-                "*://www.youtube.com/*"
+                "*://*.youtube.com/*"
             ],
             "js": [
                 "content.js"

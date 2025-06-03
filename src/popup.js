@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
         hl: 'en',
     };
 
+    document.querySelectorAll('[data-locale]').forEach(e => {
+        const message = chrome.i18n.getMessage(e.dataset.locale);
+        const lastNode = e.childNodes[e.childNodes.length - 1];
+        if (lastNode.nodeType === Node.TEXT_NODE) {
+            lastNode.textContent = message;
+        } else if (e.childNodes.length === 0) {
+            e.innerText = message;
+        }
+    });
+
     function updateSetting(setting, value) {
         let updateObj = {};
         updateObj[setting] = value;

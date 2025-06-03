@@ -1,0 +1,35 @@
+{
+    "popup_tag_line": {
+        "message": "解除阻塞！"
+    },
+    "popup_automatically_play_videos": {
+        "message": "自动播放视频"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "启用隐私增强模式"
+    },
+    "popup_show_closed_captions": {
+        "message": "显示字幕"
+    },
+    "popup_show_video_annotations": {
+        "message": "显示视频注释"
+    },
+    "popup_display_player_controls": {
+        "message": "显示播放器控件"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "显示全屏按钮"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "禁用键盘控制"
+    },
+    "popup_loop_video_playlist": {
+        "message": "循环播放视频/播放列表"
+    },
+    "popup_generic_related_videos": {
+        "message": "通用相关视频"
+    },
+    "popup_interface_language": {
+        "message": "界面语言"
+    }
+}
