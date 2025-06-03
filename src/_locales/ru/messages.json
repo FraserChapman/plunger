@@ -1,0 +1,35 @@
+{
+    "popup_tag_line": {
+        "message": "Разблокируйте блокировку!"
+    },
+    "popup_automatically_play_videos": {
+        "message": "Автоматически воспроизводить видео"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "Включить режим повышенной конфиденциальности"
+    },
+    "popup_show_closed_captions": {
+        "message": "Показывать субтитры"
+    },
+    "popup_show_video_annotations": {
+        "message": "Показывать аннотации к видео"
+    },
+    "popup_display_player_controls": {
+        "message": "Отображать элементы управления плеером"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "Отображать кнопку полноэкранного режима"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "Отключить управление с клавиатуры"
+    },
+    "popup_loop_video_playlist": {
+        "message": "Зациклить видео/плейлист"
+    },
+    "popup_generic_related_videos": {
+        "message": "Общие похожие видео"
+    },
+    "popup_interface_language": {
+        "message": "Язык интерфейса"
+    }
+}
