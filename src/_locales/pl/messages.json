@@ -1,0 +1,35 @@
+{
+    "popup_tag_line": {
+        "message": "Odblokuj blokadę!"
+    },
+    "popup_automatically_play_videos": {
+        "message": "Automatycznie odtwarzaj filmy"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "Włącz tryb zwiększonej prywatności"
+    },
+    "popup_show_closed_captions": {
+        "message": "Pokaż napisy (closed captions)"
+    },
+    "popup_show_video_annotations": {
+        "message": "Pokaż adnotacje wideo"
+    },
+    "popup_display_player_controls": {
+        "message": "Wyświetl elementy sterujące odtwarzacza"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "Wyświetl przycisk pełnego ekranu"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "Wyłącz sterowanie klawiaturą"
+    },
+    "popup_loop_video_playlist": {
+        "message": "Odtwarzaj wideo/listę odtwarzania w pętli"
+    },
+    "popup_generic_related_videos": {
+        "message": "Ogólne powiązane filmy"
+    },
+    "popup_interface_language": {
+        "message": "Język interfejsu"
+    }
+}
