@@ -1,0 +1,35 @@
+{
+    "popup_tag_line": {
+        "message": "Odblokujte zablokování!"
+    },
+    "popup_automatically_play_videos": {
+        "message": "Automaticky přehrávat videa"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "Povolit režim se zvýšenou ochranou soukromí"
+    },
+    "popup_show_closed_captions": {
+        "message": "Zobrazit skryté titulky"
+    },
+    "popup_show_video_annotations": {
+        "message": "Zobrazit video anotace"
+    },
+    "popup_display_player_controls": {
+        "message": "Zobrazit ovládací prvky přehrávače"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "Zobrazit tlačítko celé obrazovky"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "Zakázat ovládání klávesnicí"
+    },
+    "popup_loop_video_playlist": {
+        "message": "Přehrávat video/seznam skladeb ve smyčce"
+    },
+    "popup_generic_related_videos": {
+        "message": "Obecná související videa"
+    },
+    "popup_interface_language": {
+        "message": "Jazyk rozhraní"
+    }
+}
