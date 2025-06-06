@@ -1,6 +1,6 @@
 # ![plunger use](src/icon32.png) Plunger
 
-> NB - Google recently (June 2025) changed how ad blocking works on Youtube - aggressively monitoring and reverting programmatic changes to the DOM. As such the current version (1.0.1) of this extension may not work correctly until a workaround/update. Apologies for any inconvenience. 
+> NB - Google recently (June 2025) changed how ad blocking works on Youtube - aggressively monitoring and reverting programmatic changes to the DOM. As such the current version (1.0.1) of this extension may not work correctly until a workaround/update can be implemented. Apologies for any inconvenience. 
 
 ## The Youtube Adblock Blockage Remover
 
