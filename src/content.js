@@ -13,7 +13,6 @@ function createIframe(vid, settings) {
                 if (value) {
                     domain = 'www.youtube-nocookie.com';
                 }
-
                 break;
             case 'hl':
                 params.set(key, value);
@@ -41,12 +40,10 @@ function createIframe(vid, settings) {
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.style.minHeight = '240px';
-    iframe.style.maxHeight = '600px';
     iframe.onload = () => setAspectRatio();
 
     return iframe;
 }
-
 
 function updatePlayer(vid, settings) {
     const playerElement = document.getElementById('player');
@@ -96,25 +93,23 @@ function setAspectRatio() {
     }
 }
 
-function waitForElement(selector) {
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            if (mutation.addedNodes.length > 0) {
-                const currentLocation = window.location.href;
-                if (currentLocation !== locationHref) {
-                    locationHref = currentLocation;
-                    onUrlChange();
-                    return
-                }
+function checkAndRemove(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.remove();
+        onUrlChange();
+    }
+}
 
-                const element = document.querySelector(selector);
-                if (element && element.offsetParent) {
-                    element.remove();
-                    onUrlChange();
-                    return;
-                }
-            }
-        });
+function waitForElement(selector) {
+    checkAndRemove(selector);
+    const observer = new MutationObserver((mutations) => {
+        checkAndRemove(selector);
+        const currentLocation = window.location.href;
+        if (currentLocation !== locationHref) {
+            locationHref = currentLocation;
+            onUrlChange();
+        }
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
