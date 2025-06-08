@@ -40,6 +40,7 @@ function createIframe(vid, settings) {
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.style.minHeight = '240px';
+    iframe.style.borderRadius = '12px';
     iframe.onload = () => setAspectRatio();
 
     return iframe;
