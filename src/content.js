@@ -96,10 +96,14 @@ function setAspectRatio() {
 }
 
 function checkAndRemove(selector) {
-    const element = document.querySelector(selector);
-    if (element) {
-        element.remove();
-        onUrlChange();
+    const elements = document.querySelectorAll(selector);
+    for (const element of elements) {
+        if (element.offsetParent !== null) {
+            console.log("Removed", element)
+            element.remove();
+            onUrlChange();
+            break;
+        }
     }
 }
 
