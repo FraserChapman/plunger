@@ -51,6 +51,7 @@ function updatePlayer(vid, settings) {
     if (playerElement) {
         playerElement.innerHTML = '';
         playerElement.appendChild(createIframe(vid, settings));
+        setAspectRatio();
     }
 }
 
