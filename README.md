@@ -27,6 +27,16 @@ Plunger is a no-fuss, install-and-forget kind of extension. It works quietly beh
 ## Settings
 
 # ![plunger default settings](img/plunger-settings.png)
+# ![plunger default settings](img/plunger-settings-2.png)
+
+### Enable the extension 
+
+The main toggle switch at the top of the popup menu serves as a quick on/off switch for the extension's core functionality.
+
+* `enabled` (default) The extension is active. The toolbar icon will be in full color on YouTube pages and the ad-block wall will be bypassed.
+* `disabled` The extension is "paused." The ad-blocking detection removal functionality will stop, and the toolbar icon will be greyed out on all sites.
+
+This just provides a convenient way to temporarily pause the extension's activity without needing to fully disable it from the main browser management pages; `chrome://extensions`, `about:addons`, `edge://extensions/`
 
 ### Automatically play videos
 
