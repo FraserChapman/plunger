@@ -2,6 +2,9 @@
     "popup_tag_line": {
         "message": "Die Blockade beseitigen!"
     },
+    "popup_enable_plugin": {
+        "message": "Plunger aktivieren"
+    },    
     "popup_automatically_play_videos": {
         "message": "Videos automatisch abspielen"
     },
