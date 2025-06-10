@@ -33,7 +33,8 @@ hr {
     margin: 1rem 0;
 }
 
-#main-controls, #options-container {
+#main-controls,
+#options-container {
     background-color: var(--container-color);
     border-radius: 8px;
     padding: 1rem;
@@ -55,7 +56,8 @@ hr {
     list-style: none;
 }
 
-#options label, .switch-label {
+#options label,
+.switch-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,11 +122,11 @@ hr {
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: var(--accent-color);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(20px);
 }
 
@@ -136,4 +138,19 @@ input:checked + .slider:before {
     font-size: 0.9rem;
     padding: 0.5rem;
     margin-top: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1e1e1e;
+        --container-color: #2d2d2d;
+        --text-color: #f0f0f0;
+        --accent-color: #3d93ff;
+        --border-color: #444444;
+        --switch-bg-off: #555555;
+    }
+
+    em {
+        color: #aaaaaa;
+    }
 }
