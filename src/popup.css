@@ -1,0 +1,139 @@
+:root {
+    --background-color: #f0f0f0;
+    --container-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #007bff;
+    --border-color: #dddddd;
+    --switch-bg-off: #cccccc;
+}
+
+body {
+    width: 240px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+em {
+    font-style: italic;
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 1rem 0;
+}
+
+#main-controls, #options-container {
+    background-color: var(--container-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+#main-controls {
+    padding: 0.75rem 1rem;
+}
+
+#options-container {
+    margin-top: 0.75rem;
+}
+
+#options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#options label, .switch-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+#options label {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#options li:last-child label {
+    border-bottom: none;
+}
+
+#options input[type="text"] {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+/* Main Toggle Switch */
+.switch-label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switch-bg-off);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+#toggle-options-btn {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
