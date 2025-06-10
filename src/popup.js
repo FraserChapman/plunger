@@ -28,7 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.storage.sync.set(updateObj);
     }
 
+    function updateIcon(enabled) {
+        const iconPaths = enabled ? {
+            "16": "icon16.png",
+            "32": "icon32.png",
+            "128": "icon128.png"
+        } : {
+            "16": "disabled16.png",
+            "32": "disabled32.png",
+            "128": "disabled128.png"
+        };
+        chrome.action.setIcon({ path: iconPaths });
+    }
+
     chrome.storage.sync.get(defaults, settings => {
+        updateIcon(settings.enabled);
         Object.keys(defaults).forEach(setting => {
             const input = document.getElementById(setting);
             if (!input) {
@@ -36,7 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const prop = input.type === 'checkbox' ? 'checked' : 'value';
             input[prop] = settings[setting];
-            input.addEventListener('change', () => updateSetting(setting, input[prop]));
+            input.addEventListener('change', () => {
+                updateSetting(setting, input[prop])
+                if (setting === 'enabled') {
+                    updateIcon(input[prop]);
+                }
+            });
+
         });
     });
 });
