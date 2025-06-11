@@ -2,6 +2,9 @@
     "popup_tag_line": {
         "message": "¡Desbloquea el bloqueo!"
     },
+    "popup_enable_plugin": {
+        "message": "Habilitar Plunger"
+    },
     "popup_automatically_play_videos": {
         "message": "Reproducir videos automáticamente"
     },

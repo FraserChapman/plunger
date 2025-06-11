@@ -1,0 +1,38 @@
+{
+    "popup_tag_line": {
+        "message": "रुकावट हटाओ!"
+    },
+    "popup_enable_plugin": {
+        "message": "Plunger सक्षम करें"
+    },
+    "popup_automatically_play_videos": {
+        "message": "वीडियो स्वचालित रूप से चलाएं"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "गोपनीयता-वर्धित मोड सक्षम करें"
+    },
+    "popup_show_closed_captions": {
+        "message": "बंद कैप्शन दिखाएं"
+    },
+    "popup_show_video_annotations": {
+        "message": "वीडियो एनोटेशन दिखाएं"
+    },
+    "popup_display_player_controls": {
+        "message": "प्लेयर नियंत्रण प्रदर्शित करें"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "फ़ुलस्क्रीन बटन प्रदर्शित करें"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "कीबोर्ड नियंत्रण अक्षम करें"
+    },
+    "popup_loop_video_playlist": {
+        "message": "वीडियो/प्लेलिस्ट लूप करें"
+    },
+    "popup_generic_related_videos": {
+        "message": "सामान्य संबंधित वीडियो"
+    },
+    "popup_interface_language": {
+        "message": "इंटरफ़ेस की भाषा"
+    }
+}

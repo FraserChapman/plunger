@@ -1,0 +1,38 @@
+{
+    "popup_tag_line": {
+        "message": "ブロックを解除しましょう！"
+    },
+    "popup_enable_plugin": {
+        "message": "Plungerを有効にする"
+    },
+    "popup_automatically_play_videos": {
+        "message": "動画を自動再生"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "プライバシー強化モードを有効にする"
+    },
+    "popup_show_closed_captions": {
+        "message": "字幕を表示"
+    },
+    "popup_show_video_annotations": {
+        "message": "動画アノテーションを表示"
+    },
+    "popup_display_player_controls": {
+        "message": "プレーヤーコントロールを表示"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "全画面表示ボタンを表示"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "キーボードコントロールを無効にする"
+    },
+    "popup_loop_video_playlist": {
+        "message": "動画/プレイリストをループ再生"
+    },
+    "popup_generic_related_videos": {
+        "message": "一般的な関連動画"
+    },
+    "popup_interface_language": {
+        "message": "インターフェース言語"
+    }
+}

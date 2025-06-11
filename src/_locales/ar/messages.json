@@ -1,0 +1,38 @@
+{
+    "popup_tag_line": {
+        "message": "قم بفك الحظر!"
+    },
+    "popup_enable_plugin": {
+        "message": "تفعيل Plunger"
+    },
+    "popup_automatically_play_videos": {
+        "message": "تشغيل مقاطع الفيديو تلقائيًا"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "تفعيل وضع الخصوصية المحسّن"
+    },
+    "popup_show_closed_captions": {
+        "message": "إظهار التسميات التوضيحية المغلقة"
+    },
+    "popup_show_video_annotations": {
+        "message": "إظهار التعليقات التوضيحية للفيديو"
+    },
+    "popup_display_player_controls": {
+        "message": "عرض عناصر التحكم في المشغل"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "عرض زر ملء الشاشة"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "تعطيل أزرار التحكم بلوحة المفاتيح"
+    },
+    "popup_loop_video_playlist": {
+        "message": "تكرار الفيديو/قائمة التشغيل"
+    },
+    "popup_generic_related_videos": {
+        "message": "مقاطع فيديو عامة ذات صلة"
+    },
+    "popup_interface_language": {
+        "message": "لغة الواجهة"
+    }
+}

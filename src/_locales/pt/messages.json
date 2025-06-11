@@ -1,0 +1,38 @@
+{
+    "popup_tag_line": {
+        "message": "Desbloqueie o bloqueio!"
+    },
+    "popup_enable_plugin": {
+        "message": "Ativar o Plunger"
+    },
+    "popup_automatically_play_videos": {
+        "message": "Reproduzir vídeos automaticamente"
+    },
+    "popup_privacy_enhanced_mode": {
+        "message": "Ativar modo de privacidade melhorado"
+    },
+    "popup_show_closed_captions": {
+        "message": "Mostrar legendas ocultas"
+    },
+    "popup_show_video_annotations": {
+        "message": "Mostrar anotações de vídeo"
+    },
+    "popup_display_player_controls": {
+        "message": "Exibir controlos do leitor"
+    },
+    "popup_display_fullscreen_button": {
+        "message": "Exibir botão de ecrã inteiro"
+    },
+    "popup_disable_keyboard_controls": {
+        "message": "Desativar controlos de teclado"
+    },
+    "popup_loop_video_playlist": {
+        "message": "Repetir vídeo/lista de reprodução"
+    },
+    "popup_generic_related_videos": {
+        "message": "Vídeos relacionados genéricos"
+    },
+    "popup_interface_language": {
+        "message": "Idioma da interface"
+    }
+}
