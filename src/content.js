@@ -122,9 +122,15 @@ function waitForElement(selector) {
     window.addEventListener('beforeunload', () => observer.disconnect());
 }
 
-waitForElement('#error-screen');
+chrome.storage.sync.get({ enabled: true }, ({ enabled }) => {
+    if (!enabled) {
+        return;
+    }
 
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(setAspectRatio, 100);
+    waitForElement('#error-screen');
+
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(setAspectRatio, 10);
+    });
 });
