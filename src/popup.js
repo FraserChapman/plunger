@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         iv_load_policy: true,
         fs: true,
         rel: false,
-        hl: 'en',
+        hl: chrome.i18n.getUILanguage(),
     };
 
     chrome.storage.sync.get(defaults, settings => {
