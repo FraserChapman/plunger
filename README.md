@@ -123,7 +123,9 @@ The parameter value is an [ISO 639-1 two-letter language code](http://www.loc.go
  
 The interface language is used for tooltips in the player and also affects the default caption track. Note that YouTube might select a different caption track language for a particular user based on the user's individual language preferences and the availability of caption tracks.
 
-*   `en` (default) Use English
+By default, Plunger will use your [browser's current display language](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getUILanguage). You can override this by entering a different language code in the settings.
+
+*   (default) The browser UI language code
 
 ## Installation
 
