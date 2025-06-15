@@ -40,6 +40,7 @@ function createIframe(vid, settings) {
     iframe.style.width = '100%';
     iframe.style.height = '100%';
     iframe.style.minHeight = '240px';
+    iframe.style.borderRadius = '12px';
     iframe.onload = () => setAspectRatio();
 
     return iframe;
@@ -50,6 +51,7 @@ function updatePlayer(vid, settings) {
     if (playerElement) {
         playerElement.innerHTML = '';
         playerElement.appendChild(createIframe(vid, settings));
+        setAspectRatio();
     }
 }
 
@@ -94,10 +96,14 @@ function setAspectRatio() {
 }
 
 function checkAndRemove(selector) {
-    const element = document.querySelector(selector);
-    if (element) {
-        element.remove();
-        onUrlChange();
+    const elements = document.querySelectorAll(selector);
+    for (const element of elements) {
+        if (element.offsetParent !== null) {
+            console.log("Removed", element)
+            element.remove();
+            onUrlChange();
+            break;
+        }
     }
 }
 
@@ -116,9 +122,15 @@ function waitForElement(selector) {
     window.addEventListener('beforeunload', () => observer.disconnect());
 }
 
-waitForElement('#error-screen');
+chrome.storage.sync.get({ enabled: true }, ({ enabled }) => {
+    if (!enabled) {
+        return;
+    }
 
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(setAspectRatio, 100);
+    waitForElement('#error-screen');
+
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(setAspectRatio, 10);
+    });
 });

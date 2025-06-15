@@ -1,258 +1,279 @@
 <!DOCTYPE html>
-<html>
 
 <head>
-    <title>plunger</title>
-    <style>
-        body {
-            width: 200px;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        #options {
-            margin-top: 1rem;
-        }
-
-        label {
-            display: block;
-            margin: 0.5rem;
-        }
-    </style>
+   <title>plunger</title>
+   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 
 <body>
-    <img src="icon128.png" alt="plunger" />
-    <h1>plunger</h1>
-    <em data-locale="popup_tag_line">Unblock the blockage!</em>
-    <div id="options">
-        <label data-locale="popup_automatically_play_videos">
-            <input type="checkbox" id="autoplay">
-            Automatically play videos
-        </label>
-        <label data-locale="popup_privacy_enhanced_mode">
-            <input type="checkbox" id="privacyenhanced">
-            Enable privacy-enhanced mode
-        </label>
-        <label data-locale="popup_show_closed_captions">
-            <input type="checkbox" id="cc_load_policy">
-            Show closed captions
-        </label>
-        <label data-locale="popup_show_video_annotations">
-            <input type="checkbox" id="iv_load_policy">
-            Show video annotations
-        </label>
-        <label data-locale="popup_display_player_controls">
-            <input type="checkbox" id="controls">
-            Display player controls
-        </label>
-        <label data-locale="popup_display_fullscreen_button">
-            <input type="checkbox" id="fs">
-            Display fullscreen button
-        </label>
-        <label data-locale="popup_disable_keyboard_controls">
-            <input type="checkbox" id="disablekb">
-            Disable keyboard controls
-        </label>
-        <label data-locale="popup_loop_video_playlist">
-            <input type="checkbox" id="loop">
-            Loop video/playlist
-        </label>
-        <label data-locale="popup_generic_related_videos">
-            <input type="checkbox" id="rel">
-            Generic related videos
-        </label>
-        <label data-locale="popup_interface_language">
-            <input type="text" id="hl" list="lang" size="4">
-            <datalist id="lang">
-                <option value="aa">Afar / Afaraf</option>
-                <option value="ab">Abkhaz / аҧсуа бызшәа</option>
-                <option value="ae">Avestan / avesta</option>
-                <option value="af">Afrikaans / Afrikaans</option>
-                <option value="ak">Akan / Akan</option>
-                <option value="am">Amharic / አማርኛ</option>
-                <option value="an">Aragonese / aragonés</option>
-                <option value="ar">Arabic / اللغة العربية</option>
-                <option value="as">Assamese / অসমীয়া</option>
-                <option value="av">Avaric / авар мацӀ</option>
-                <option value="ay">Aymara / aymar aru</option>
-                <option value="az">Azerbaijani / azərbaycan dili</option>
-                <option value="ba">Bashkir / башҡорт теле</option>
-                <option value="be">Belarusian / беларуская мова</option>
-                <option value="bg">Bulgarian / български език</option>
-                <option value="bh">Bihari / भोजपुरी</option>
-                <option value="bi">Bislama / Bislama</option>
-                <option value="bm">Bambara / bamanankan</option>
-                <option value="bn">Bengali / বাংলা</option>
-                <option value="bo">Tibetan / བོད་ཡིག</option>
-                <option value="br">Breton / brezhoneg</option>
-                <option value="bs">Bosnian / bosanski jezik</option>
-                <option value="ca">Catalan / Català</option>
-                <option value="ce">Chechen / нохчийн мотт</option>
-                <option value="ch">Chamorro / Chamoru</option>
-                <option value="co">Corsican / corsu</option>
-                <option value="cr">Cree / ᓀᐦᐃᔭᐍᐏᐣ</option>
-                <option value="cs">Czech / čeština</option>
-                <option value="cu">Old Church Slavonic / ѩзыкъ словѣньскъ</option>
-                <option value="cv">Chuvash / чӑваш чӗлхи</option>
-                <option value="cy">Welsh / Cymraeg</option>
-                <option value="da">Danish / dansk</option>
-                <option value="de">German / Deutsch</option>
-                <option value="dv">Divehi / Dhivehi</option>
-                <option value="dz">Dzongkha / རྫོང་ཁ</option>
-                <option value="ee">Ewe / Eʋegbe</option>
-                <option value="el">Greek / Ελληνικά</option>
-                <option value="en">English / English</option>
-                <option value="eo">Esperanto / Esperanto</option>
-                <option value="es">Spanish / Español</option>
-                <option value="et">Estonian / eesti</option>
-                <option value="eu">Basque / euskara</option>
-                <option value="fa">Persian / فارسی</option>
-                <option value="ff">Fula / Fulfulde</option>
-                <option value="fi">Finnish / suomi</option>
-                <option value="fj">Fijian / Vakaviti</option>
-                <option value="fo">Faroese / føroyskt</option>
-                <option value="fr">French / Français</option>
-                <option value="fy">Western Frisian / Frysk</option>
-                <option value="ga">Irish / Gaeilge</option>
-                <option value="gd">Scottish Gaelic / Gàidhlig</option>
-                <option value="gl">Galician / galego</option>
-                <option value="gu">Gujarati / ગુજરાતી</option>
-                <option value="gv">Manx / Gaelg</option>
-                <option value="ha">Hausa / هَوُسَ</option>
-                <option value="he">Hebrew / עברית</option>
-                <option value="hi">Hindi / हिन्दी</option>
-                <option value="ho">Hiri Motu / Hiri Motu</option>
-                <option value="hr">Croatian / Hrvatski</option>
-                <option value="ht">Haitian / Kreyòl ayisyen</option>
-                <option value="hu">Hungarian / magyar</option>
-                <option value="hy">Armenian / Հայերեն</option>
-                <option value="hz">Herero / Otjiherero</option>
-                <option value="ia">Interlingua / Interlingua</option>
-                <option value="id">Indonesian / Bahasa Indonesia</option>
-                <option value="ie">Interlingue / Interlingue</option>
-                <option value="ig">Igbo / Asụsụ Igbo</option>
-                <option value="ii">Nuosu / ꆈꌠ꒿ Nuosuhxop</option>
-                <option value="ik">Inupiaq / Iñupiaq</option>
-                <option value="io">Ido / Ido</option>
-                <option value="is">Icelandic / Íslenska</option>
-                <option value="it">Italian / Italiano</option>
-                <option value="iu">Inuktitut / ᐃᓄᒃᑎᑐᑦ</option>
-                <option value="ja">Japanese / 日本語</option>
-                <option value="jv">Javanese / basa Jawa</option>
-                <option value="ka">Georgian / ქართული</option>
-                <option value="kg">Kongo / Kikongo</option>
-                <option value="ki">Kikuyu / Gĩkũyũ</option>
-                <option value="kj">Kwanyama / Kuanyama</option>
-                <option value="kk">Kazakh / қазақ тілі</option>
-                <option value="kl">Kalaallisut / kalaallisut</option>
-                <option value="km">Khmer / ខេមរភាសា</option>
-                <option value="kn">Kannada / ಕನ್ನಡ</option>
-                <option value="ko">Korean / 한국어</option>
-                <option value="kr">Kanuri / Kanuri</option>
-                <option value="ks">Kashmiri / कश्मीरी</option>
-                <option value="ku">Kurdish / Kurdî</option>
-                <option value="kv">Komi / коми кыв</option>
-                <option value="kw">Cornish / Kernewek</option>
-                <option value="ky">Kyrgyz / Кыргызча</option>
-                <option value="la">Latin / latine</option>
-                <option value="lb">Luxembourgish / Lëtzebuergesch</option>
-                <option value="lg">Ganda / Luganda</option>
-                <option value="li">Limburgish / Limburgs</option>
-                <option value="ln">Lingala / Lingála</option>
-                <option value="lo">Lao / ພາສາ</option>
-                <option value="lt">Lithuanian / lietuvių kalba</option>
-                <option value="lu">Luba-Katanga / Tshiluba</option>
-                <option value="lv">Latvian / latviešu valoda</option>
-                <option value="mg">Malagasy / fiteny malagasy</option>
-                <option value="mh">Marshallese / Kajin M̧ajeļ</option>
-                <option value="mi">Māori / te reo Māori</option>
-                <option value="mk">Macedonian / македонски јазик</option>
-                <option value="ml">Malayalam / മലയാളം</option>
-                <option value="mn">Mongolian / Монгол хэл</option>
-                <option value="mr">Marathi / मराठी</option>
-                <option value="ms">Malay / Bahasa Malaysia</option>
-                <option value="mt">Maltese / Malti</option>
-                <option value="my">Burmese / ဗမာစာ</option>
-                <option value="na">Nauru / Ekakairũ Naoero</option>
-                <option value="nb">Norwegian Bokmål / Norsk bokmål</option>
-                <option value="nd">Northern Ndebele / isiNdebele</option>
-                <option value="ne">Nepali / नेपाली</option>
-                <option value="ng">Ndonga / Owambo</option>
-                <option value="nl">Dutch / Nederlands</option>
-                <option value="nn">Norwegian Nynorsk / Norsk nynorsk</option>
-                <option value="no">Norwegian / Norsk</option>
-                <option value="nr">Southern Ndebele / isiNdebele</option>
-                <option value="nv">Navajo / Diné bizaad</option>
-                <option value="ny">Chichewa / chiCheŵa</option>
-                <option value="oc">Occitan / occitan</option>
-                <option value="oj">Ojibwe / ᐊᓂᔑᓈᐯᒧᐎᓐ</option>
-                <option value="om">Oromo / Afaan Oromoo</option>
-                <option value="or">Oriya / ଓଡ଼ିଆ</option>
-                <option value="os">Ossetian / ирон æвзаг</option>
-                <option value="pa">Panjabi / ਪੰਜਾਬੀ</option>
-                <option value="pi">Pāli / पाऴि</option>
-                <option value="pl">Polish / Polski</option>
-                <option value="ps">Pashto / پښتو</option>
-                <option value="pt">Portuguese / Português</option>
-                <option value="qu">Quechua / Runa Simi</option>
-                <option value="rm">Romansh / rumantsch grischun</option>
-                <option value="rn">Kirundi / Ikirundi</option>
-                <option value="ro">Romanian / Română</option>
-                <option value="ru">Russian / Русский</option>
-                <option value="rw">Kinyarwanda / Ikinyarwanda</option>
-                <option value="sa">Sanskrit / संस्कृतम्</option>
-                <option value="sc">Sardinian / sardu</option>
-                <option value="sd">Sindhi / सिन्धी</option>
-                <option value="se">Northern Sami / Davvisámegiella</option>
-                <option value="sg">Sango / yângâ tî sängö</option>
-                <option value="si">Sinhala / සිංහල</option>
-                <option value="sk">Slovak / slovenčina</option>
-                <option value="sl">Slovenian / slovenščina</option>
-                <option value="sn">Shona / chiShona</option>
-                <option value="so">Somali / Soomaaliga</option>
-                <option value="sq">Albanian / Shqip</option>
-                <option value="sr">Serbian / српски језик</option>
-                <option value="ss">Swati / SiSwati</option>
-                <option value="st">Southern Sotho / Sesotho</option>
-                <option value="su">Sundanese / Basa Sunda</option>
-                <option value="sv">Swedish / Svenska</option>
-                <option value="sw">Swahili / Kiswahili</option>
-                <option value="ta">Tamil / தமிழ்</option>
-                <option value="te">Telugu / తెలుగు</option>
-                <option value="tg">Tajik / тоҷикӣ</option>
-                <option value="th">Thai / ไทย</option>
-                <option value="ti">Tigrinya / ትግርኛ</option>
-                <option value="tk">Turkmen / Türkmen</option>
-                <option value="tl">Tagalog / Wikang Tagalog</option>
-                <option value="tn">Tswana / Setswana</option>
-                <option value="to">Tonga / faka Tonga</option>
-                <option value="tr">Turkish / Türkçe</option>
-                <option value="ts">Tsonga / Xitsonga</option>
-                <option value="tt">Tatar / татар теле</option>
-                <option value="tw">Twi / Twi</option>
-                <option value="ty">Tahitian / Reo Tahiti</option>
-                <option value="ug">Uyghur / ئۇيغۇرچە‎</option>
-                <option value="uk">Ukrainian / Українська</option>
-                <option value="ur">Urdu / اردو</option>
-                <option value="uz">Uzbek / Ўзбек</option>
-                <option value="ve">Venda / Tshivenḓa</option>
-                <option value="vi">Vietnamese / Tiếng Việt</option>
-                <option value="vo">Volapük / Volapük</option>
-                <option value="wa">Walloon / walon</option>
-                <option value="wo">Wolof / Wollof</option>
-                <option value="xh">Xhosa / isiXhosa</option>
-                <option value="yi">Yiddish / ייִדיש</option>
-                <option value="yo">Yoruba / Yorùbá</option>
-                <option value="za">Zhuang / Saɯ cueŋƅ</option>
-                <option value="zh">Chinese / 中文</option>
-                <option value="zu">Zulu / isiZulu</option>
-            </datalist>
-            Interface language
-        </label>
-    </div>
-    <script src="popup.js"></script>
+   <img src="icon128.png" alt="plunger" />
+   <h1>plunger</h1>
+   <em data-locale="popup_tag_line">Unblock the blockage!</em>
+
+   <hr>
+
+   <div id="main-controls">
+      <div class="switch-label">
+         <span data-locale="popup_enable_plugin">Enable Plunger</span>
+         <label class="switch">
+            <input type="checkbox" id="enabled" role="switch">
+            <span class="slider"></span>
+         </label>
+      </div>
+   </div>
+
+   <button id="toggle-options-btn" data-show-text="Show Settings" data-hide-text="Hide Settings">Show Settings</button>
+
+   <div id="options-container" hidden>
+      <ul id="options">
+         <li>
+            <label>
+               <span data-locale="popup_automatically_play_videos">Automatically play videos</span>
+               <input type="checkbox" id="autoplay">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_privacy_enhanced_mode">Enable privacy-enhanced mode</span>
+               <input type="checkbox" id="privacyenhanced">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_show_closed_captions">Show closed captions</span>
+               <input type="checkbox" id="cc_load_policy">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_show_video_annotations">Show video annotations</span>
+               <input type="checkbox" id="iv_load_policy">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_display_player_controls">Display player controls</span>
+               <input type="checkbox" id="controls">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_display_fullscreen_button">Display fullscreen button</span>
+               <input type="checkbox" id="fs">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_disable_keyboard_controls">Disable keyboard controls</span>
+               <input type="checkbox" id="disablekb">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_loop_video_playlist">Loop video/playlist</span>
+               <input type="checkbox" id="loop">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_generic_related_videos">Generic related videos</span>
+               <input type="checkbox" id="rel">
+            </label>
+         </li>
+         <li>
+            <label>
+               <span data-locale="popup_interface_language">Interface language</span>
+               <input type="text" id="hl" list="lang" size="4">
+            </label>
+         </li>
+      </ul>
+      <datalist id="lang">
+         <option value="aa">Afar / Afaraf</option>
+         <option value="ab">Abkhaz / аҧсуа бызшәа</option>
+         <option value="ae">Avestan / avesta</option>
+         <option value="af">Afrikaans / Afrikaans</option>
+         <option value="ak">Akan / Akan</option>
+         <option value="am">Amharic / አማርኛ</option>
+         <option value="an">Aragonese / aragonés</option>
+         <option value="ar">Arabic / اللغة العربية</option>
+         <option value="as">Assamese / অসমীয়া</option>
+         <option value="av">Avaric / авар мацӀ</option>
+         <option value="ay">Aymara / aymar aru</option>
+         <option value="az">Azerbaijani / azərbaycan dili</option>
+         <option value="ba">Bashkir / башҡорт теле</option>
+         <option value="be">Belarusian / беларуская мова</option>
+         <option value="bg">Bulgarian / български език</option>
+         <option value="bh">Bihari / भोजपुरी</option>
+         <option value="bi">Bislama / Bislama</option>
+         <option value="bm">Bambara / bamanankan</option>
+         <option value="bn">Bengali / বাংলা</option>
+         <option value="bo">Tibetan / བོད་ཡིག</option>
+         <option value="br">Breton / brezhoneg</option>
+         <option value="bs">Bosnian / bosanski jezik</option>
+         <option value="ca">Catalan / Català</option>
+         <option value="ce">Chechen / нохчийн мотт</option>
+         <option value="ch">Chamorro / Chamoru</option>
+         <option value="co">Corsican / corsu</option>
+         <option value="cr">Cree / ᓀᐦᐃᔭᐍᐏᐣ</option>
+         <option value="cs">Czech / čeština</option>
+         <option value="cu">Old Church Slavonic / ѩзыкъ словѣньскъ</option>
+         <option value="cv">Chuvash / чӑваш чӗлхи</option>
+         <option value="cy">Welsh / Cymraeg</option>
+         <option value="da">Danish / dansk</option>
+         <option value="de">German / Deutsch</option>
+         <option value="dv">Divehi / Dhivehi</option>
+         <option value="dz">Dzongkha / རྫོང་ཁ</option>
+         <option value="ee">Ewe / Eʋegbe</option>
+         <option value="el">Greek / Ελληνικά</option>
+         <option value="en">English / English</option>
+         <option value="eo">Esperanto / Esperanto</option>
+         <option value="es">Spanish / Español</option>
+         <option value="et">Estonian / eesti</option>
+         <option value="eu">Basque / euskara</option>
+         <option value="fa">Persian / فارسی</option>
+         <option value="ff">Fula / Fulfulde</option>
+         <option value="fi">Finnish / suomi</option>
+         <option value="fj">Fijian / Vakaviti</option>
+         <option value="fo">Faroese / føroyskt</option>
+         <option value="fr">French / Français</option>
+         <option value="fy">Western Frisian / Frysk</option>
+         <option value="ga">Irish / Gaeilge</option>
+         <option value="gd">Scottish Gaelic / Gàidhlig</option>
+         <option value="gl">Galician / galego</option>
+         <option value="gu">Gujarati / ગુજરાતી</option>
+         <option value="gv">Manx / Gaelg</option>
+         <option value="ha">Hausa / هَوُسَ</option>
+         <option value="he">Hebrew / עברית</option>
+         <option value="hi">Hindi / हिन्दी</option>
+         <option value="ho">Hiri Motu / Hiri Motu</option>
+         <option value="hr">Croatian / Hrvatski</option>
+         <option value="ht">Haitian / Kreyòl ayisyen</option>
+         <option value="hu">Hungarian / magyar</option>
+         <option value="hy">Armenian / Հայերեն</option>
+         <option value="hz">Herero / Otjiherero</option>
+         <option value="ia">Interlingua / Interlingua</option>
+         <option value="id">Indonesian / Bahasa Indonesia</option>
+         <option value="ie">Interlingue / Interlingue</option>
+         <option value="ig">Igbo / Asụsụ Igbo</option>
+         <option value="ii">Nuosu / ꆈꌠ꒿ Nuosuhxop</option>
+         <option value="ik">Inupiaq / Iñupiaq</option>
+         <option value="io">Ido / Ido</option>
+         <option value="is">Icelandic / Íslenska</option>
+         <option value="it">Italian / Italiano</option>
+         <option value="iu">Inuktitut / ᐃᓄᒃᑎᑐᑦ</option>
+         <option value="ja">Japanese / 日本語</option>
+         <option value="jv">Javanese / basa Jawa</option>
+         <option value="ka">Georgian / ქართული</option>
+         <option value="kg">Kongo / Kikongo</option>
+         <option value="ki">Kikuyu / Gĩkũyũ</option>
+         <option value="kj">Kwanyama / Kuanyama</option>
+         <option value="kk">Kazakh / қазақ тілі</option>
+         <option value="kl">Kalaallisut / kalaallisut</option>
+         <option value="km">Khmer / ខេមរភាសា</option>
+         <option value="kn">Kannada / ಕನ್ನಡ</option>
+         <option value="ko">Korean / 한국어</option>
+         <option value="kr">Kanuri / Kanuri</option>
+         <option value="ks">Kashmiri / कश्मीरी</option>
+         <option value="ku">Kurdish / Kurdî</option>
+         <option value="kv">Komi / коми кыв</option>
+         <option value="kw">Cornish / Kernewek</option>
+         <option value="ky">Kyrgyz / Кыргызча</option>
+         <option value="la">Latin / latine</option>
+         <option value="lb">Luxembourgish / Lëtzebuergesch</option>
+         <option value="lg">Ganda / Luganda</option>
+         <option value="li">Limburgish / Limburgs</option>
+         <option value="ln">Lingala / Lingála</option>
+         <option value="lo">Lao / ພາສາ</option>
+         <option value="lt">Lithuanian / lietuvių kalba</option>
+         <option value="lu">Luba-Katanga / Tshiluba</option>
+         <option value="lv">Latvian / latviešu valoda</option>
+         <option value="mg">Malagasy / fiteny malagasy</option>
+         <option value="mh">Marshallese / Kajin M̧ajeļ</option>
+         <option value="mi">Māori / te reo Māori</option>
+         <option value="mk">Macedonian / македонски јазик</option>
+         <option value="ml">Malayalam / മലയാളം</option>
+         <option value="mn">Mongolian / Монгол хэл</option>
+         <option value="mr">Marathi / मराठी</option>
+         <option value="ms">Malay / Bahasa Malaysia</option>
+         <option value="mt">Maltese / Malti</option>
+         <option value="my">Burmese / ဗမာစာ</option>
+         <option value="na">Nauru / Ekakairũ Naoero</option>
+         <option value="nb">Norwegian Bokmål / Norsk bokmål</option>
+         <option value="nd">Northern Ndebele / isiNdebele</option>
+         <option value="ne">Nepali / नेपाली</option>
+         <option value="ng">Ndonga / Owambo</option>
+         <option value="nl">Dutch / Nederlands</option>
+         <option value="nn">Norwegian Nynorsk / Norsk nynorsk</option>
+         <option value="no">Norwegian / Norsk</option>
+         <option value="nr">Southern Ndebele / isiNdebele</option>
+         <option value="nv">Navajo / Diné bizaad</option>
+         <option value="ny">Chichewa / chiCheŵa</option>
+         <option value="oc">Occitan / occitan</option>
+         <option value="oj">Ojibwe / ᐊᓂᔑᓈᐯᒧᐎᓐ</option>
+         <option value="om">Oromo / Afaan Oromoo</option>
+         <option value="or">Oriya / ଓଡ଼ିଆ</option>
+         <option value="os">Ossetian / ирон æвзаг</option>
+         <option value="pa">Panjabi / ਪੰਜਾਬੀ</option>
+         <option value="pi">Pāli / पाऴि</option>
+         <option value="pl">Polish / Polski</option>
+         <option value="ps">Pashto / پښتو</option>
+         <option value="pt">Portuguese / Português</option>
+         <option value="qu">Quechua / Runa Simi</option>
+         <option value="rm">Romansh / rumantsch grischun</option>
+         <option value="rn">Kirundi / Ikirundi</option>
+         <option value="ro">Romanian / Română</option>
+         <option value="ru">Russian / Русский</option>
+         <option value="rw">Kinyarwanda / Ikinyarwanda</option>
+         <option value="sa">Sanskrit / संस्कृतम्</option>
+         <option value="sc">Sardinian / sardu</option>
+         <option value="sd">Sindhi / सिन्धी</option>
+         <option value="se">Northern Sami / Davvisámegiella</option>
+         <option value="sg">Sango / yângâ tî sängö</option>
+         <option value="si">Sinhala / සිංහල</option>
+         <option value="sk">Slovak / slovenčina</option>
+         <option value="sl">Slovenian / slovenščina</option>
+         <option value="sn">Shona / chiShona</option>
+         <option value="so">Somali / Soomaaliga</option>
+         <option value="sq">Albanian / Shqip</option>
+         <option value="sr">Serbian / српски језик</option>
+         <option value="ss">Swati / SiSwati</option>
+         <option value="st">Southern Sotho / Sesotho</option>
+         <option value="su">Sundanese / Basa Sunda</option>
+         <option value="sv">Swedish / Svenska</option>
+         <option value="sw">Swahili / Kiswahili</option>
+         <option value="ta">Tamil / தமிழ்</option>
+         <option value="te">Telugu / తెలుగు</option>
+         <option value="tg">Tajik / тоҷикӣ</option>
+         <option value="th">Thai / ไทย</option>
+         <option value="ti">Tigrinya / ትግርኛ</option>
+         <option value="tk">Turkmen / Türkmen</option>
+         <option value="tl">Tagalog / Wikang Tagalog</option>
+         <option value="tn">Tswana / Setswana</option>
+         <option value="to">Tonga / faka Tonga</option>
+         <option value="tr">Turkish / Türkçe</option>
+         <option value="ts">Tsonga / Xitsonga</option>
+         <option value="tt">Tatar / татар теле</option>
+         <option value="tw">Twi / Twi</option>
+         <option value="ty">Tahitian / Reo Tahiti</option>
+         <option value="ug">Uyghur / ئۇيغۇرچە‎</option>
+         <option value="uk">Ukrainian / Українська</option>
+         <option value="ur">Urdu / اردو</option>
+         <option value="uz">Uzbek / Ўзбек</option>
+         <option value="ve">Venda / Tshivenḓa</option>
+         <option value="vi">Vietnamese / Tiếng Việt</option>
+         <option value="vo">Volapük / Volapük</option>
+         <option value="wa">Walloon / walon</option>
+         <option value="wo">Wolof / Wollof</option>
+         <option value="xh">Xhosa / isiXhosa</option>
+         <option value="yi">Yiddish / ייִדיש</option>
+         <option value="yo">Yoruba / Yorùbá</option>
+         <option value="za">Zhuang / Saɯ cueŋƅ</option>
+         <option value="zh">Chinese / 中文</option>
+         <option value="zu">Zulu / isiZulu</option>
+      </datalist>
+   </div>
+
+   <script src="popup.js"></script>
 </body>
 
 </html>
