@@ -43,7 +43,7 @@ echo "Added browser-specific settings to Firefox manifest"
 
 mv "$TMP_XPI_DIR/manifest.json.tmp" "$TMP_XPI_DIR/manifest.json"
 
-(cd "$TMP_ZIP_DIR" && zip -r "$BUILD_DIR_ABSOLUTE/plunger@$VERSION.zip" *)
-(cd "$TMP_XPI_DIR" && zip -r "$BUILD_DIR_ABSOLUTE/plunger@$VERSION.xpi" *)
+(cd "$TMP_ZIP_DIR" && zip -T -u -r "$BUILD_DIR_ABSOLUTE/plunger@$VERSION.zip" *)
+(cd "$TMP_XPI_DIR" && zip -T -u -r "$BUILD_DIR_ABSOLUTE/plunger@$VERSION.xpi" *)
 
 echo "Build $VERSION complete:  [$BUILD_DIR/plunger@$VERSION.xpi, $BUILD_DIR/plunger@$VERSION.zip]"

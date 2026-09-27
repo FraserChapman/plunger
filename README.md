@@ -27,6 +27,16 @@ Plunger is a no-fuss, install-and-forget kind of extension. It works quietly beh
 ## Settings
 
 # ![plunger default settings](img/plunger-settings.png)
+# ![plunger default settings](img/plunger-settings-2.png)
+
+### Enable the extension 
+
+The main toggle switch at the top of the popup menu serves as a quick on/off switch for the extension's core functionality.
+
+* `enabled` (default) The extension is active. The toolbar icon will be in full color on YouTube pages and the ad-block wall will be bypassed.
+* `disabled` The extension is "paused." The ad-blocking detection removal functionality will stop, and the toolbar icon will be greyed out on all sites.
+
+This just provides a convenient way to temporarily pause the extension's activity without needing to fully disable it from the main browser management pages; `chrome://extensions`, `about:addons`, `edge://extensions/`
 
 ### Automatically play videos
 
@@ -113,7 +123,9 @@ The parameter value is an [ISO 639-1 two-letter language code](http://www.loc.go
  
 The interface language is used for tooltips in the player and also affects the default caption track. Note that YouTube might select a different caption track language for a particular user based on the user's individual language preferences and the availability of caption tracks.
 
-*   `en` (default) Use English
+By default, Plunger will use your [browser's current display language](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getUILanguage). You can override this by entering a different language code in the settings.
+
+*   (default) The browser UI language code
 
 ## Installation
 

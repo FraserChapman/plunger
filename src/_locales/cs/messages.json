@@ -2,6 +2,9 @@
     "popup_tag_line": {
         "message": "Odblokujte zablokování!"
     },
+    "popup_enable_plugin": {
+        "message": "Povolit Plunger"
+    },
     "popup_automatically_play_videos": {
         "message": "Automaticky přehrávat videa"
     },
